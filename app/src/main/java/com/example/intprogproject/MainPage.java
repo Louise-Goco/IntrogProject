@@ -16,7 +16,7 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 1. Initialize the button using the ID from your XML
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button continueButton = findViewById(R.id.btnContinue);
+        Button continueButton = findViewById(R.id.btnContinue);
 
         // 2. Set up the click listener
         continueButton.setOnClickListener(new View.OnClickListener() {

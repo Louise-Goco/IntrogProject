@@ -129,7 +129,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/signUpText"
+        android:id="@+id/signInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000"
@@ -141,7 +141,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCreateAcct"
         app:layout_constraintVertical_bias="0.0"
-        tools:text="Sign Up" />
+        tools:text="Sign In" />
 
     <ImageView
         android:id="@+id/RegLogo"

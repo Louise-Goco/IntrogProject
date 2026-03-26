@@ -8,14 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.content.Intent;
+import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Registration extends AppCompatActivity {
 
     private EditText etUsername, etPhoneNumber, etEmail, etPassword, etConfirmPassword;
     private Button btnCreateAccount;
-    private TextView tvSignUp;
+    private TextView tvSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class Registration extends AppCompatActivity {
         etPassword = findViewById(R.id.regPassword);
         etConfirmPassword = findViewById(R.id.regConfirmPass);
         btnCreateAccount = findViewById(R.id.btnCreateAcct);
-        tvSignUp = findViewById(R.id.signUpText);
+        tvSignIn = findViewById(R.id.signInText);
     }
 
     private void setupClickListeners() {
@@ -46,13 +47,12 @@ public class Registration extends AppCompatActivity {
             }
         });
 
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
+        tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navigate to login screen
-                // Intent intent = new Intent(Registration.this, LoginActivity.class);
-                // startActivity(intent);
-                // finish();
+                 Intent intent = new Intent(Registration.this, LoginActivity.class);
+                 startActivity(intent);
                 Toast.makeText(Registration.this, "Navigate to Login", Toast.LENGTH_SHORT).show();
             }
         });
@@ -139,17 +139,18 @@ public class Registration extends AppCompatActivity {
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
 
-        // TODO: Implement your registration logic here
-        // This could involve:
-        // - Saving to local database (SQLite/Room)
-        // - Sending to backend API
-        // - Firebase Authentication
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("saved_email", email);
+        editor.putString("saved_password", password);
+        editor.putString("saved_username", username);
+        editor.apply();
+        Intent intent = new Intent(Registration.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+
 
         Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show();
 
-        // Navigate to login or main activity
-        // Intent intent = new Intent(Registration.this, LoginActivity.class);
-        // startActivity(intent);
-        // finish();
     }
 }
