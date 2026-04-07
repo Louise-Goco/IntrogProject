@@ -4,154 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/warm_cream">
 
     <TextView
         android:id="@+id/registrationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/soft_dark_gray"
+        android:textSize="32sp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        tools:text="REGISTRATION" />
+        tools:text="Registration" />
+
+    <ImageView
+        android:id="@+id/RegLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationText"
+        app:srcCompat="@drawable/main_logo" />
 
     <EditText
         android:id="@+id/regUsername"
-        android:layout_width="244dp"
-        android:layout_height="41dp"
-        android:autofillHints=""
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="username"
+        android:background="@drawable/edit_text_bg"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="text"
-        android:textColor="#000000"
+        android:textColor="@color/soft_dark_gray"
+        android:textColorHint="@color/text_hint_gray"
         android:textSize="14sp"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegLogo"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <EditText
-        android:id="@+id/regConfirmPass"
-        android:layout_width="244dp"
-        android:layout_height="41dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/RegLogo" />
 
     <EditText
         android:id="@+id/RegPhone"
-        android:layout_width="244dp"
-        android:layout_height="41dp"
-        android:autofillHints=""
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="phone"
+        android:background="@drawable/edit_text_bg"
         android:ems="10"
         android:hint="@string/phone_number"
         android:inputType="phone"
-        android:textColor="#000000"
+        android:textColor="@color/soft_dark_gray"
+        android:textColorHint="@color/text_hint_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regUsername"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/regUsername" />
+        
+    <EditText
+        android:id="@+id/regEmailAddress"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/soft_dark_gray"
+        android:textColorHint="@color/text_hint_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegPhone" />
 
     <EditText
         android:id="@+id/regPassword"
-        android:layout_width="244dp"
-        android:layout_height="41dp"
-        android:autofillHints=""
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="password"
+        android:background="@drawable/edit_text_bg"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColor="#000000"
+        android:textColor="@color/soft_dark_gray"
+        android:textColorHint="@color/text_hint_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regEmailAddress"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/regEmailAddress" />
+
+    <EditText
+        android:id="@+id/regConfirmPass"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="password"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:textColor="@color/soft_dark_gray"
+        android:textColorHint="@color/text_hint_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword" />
+
+    <Button
+        android:id="@+id/btnCreateAcct"
+        android:layout_width="280dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/warm_cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regConfirmPass"
+        tools:text="Create Account" />
 
     <TextView
         android:id="@+id/AlrHvaAcctText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/already_have_an_account"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/soft_dark_gray"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCreateAcct"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnCreateAcct"
-        android:layout_width="244dp"
-        android:layout_height="45dp"
-        android:background="#673AB7"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regConfirmPass"
-        app:layout_constraintVertical_bias="0.109"
-        tools:text="Create Account" />
-
-    <EditText
-        android:id="@+id/regEmailAddress"
-        android:layout_width="244dp"
-        android:layout_height="41dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/email_address"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegPhone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAcct" />
 
     <TextView
         android:id="@+id/signInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/soft_coral"
+        android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCreateAcct"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/AlrHvaAcctText"
+        app:layout_constraintStart_toEndOf="@+id/AlrHvaAcctText"
+        app:layout_constraintTop_toTopOf="@+id/AlrHvaAcctText"
         tools:text="Sign In" />
-
-    <ImageView
-        android:id="@+id/RegLogo"
-        android:layout_width="178dp"
-        android:layout_height="176dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155"
-        app:srcCompat="@drawable/main_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

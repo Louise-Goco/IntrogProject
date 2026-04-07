@@ -2,7 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Intprogproject" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/soft_coral</item>
+        <item name="colorPrimaryVariant">@color/muted_coral</item>
+        <item name="colorOnPrimary">@color/warm_cream</item>
+        <item name="android:windowBackground">@color/warm_cream</item>
     </style>
 
     <style name="Theme.Intprogproject" parent="Base.Theme.Intprogproject" />
