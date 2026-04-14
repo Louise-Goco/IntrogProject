@@ -50,7 +50,6 @@ class Registration : AppCompatActivity() {
             // Navigate to login screen
             val intent = Intent(this@Registration, LoginActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this@Registration, "Navigate to Login", Toast.LENGTH_SHORT).show()
         }
     }
 

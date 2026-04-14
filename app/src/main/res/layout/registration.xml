@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
+        android:text="Registration"
         android:textColor="@color/soft_dark_gray"
         android:textSize="32sp"
         android:layout_marginTop="32dp"
@@ -120,6 +121,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/button_bg"
+        android:text="Create Account"
         android:textColor="@color/warm_cream"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,12 +146,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:text="Sign In"
         android:textColor="@color/soft_coral"
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/AlrHvaAcctText"
         app:layout_constraintStart_toEndOf="@+id/AlrHvaAcctText"
-        app:layout_constraintTop_toTopOf="@+id/AlrHvaAcctText"
-        tools:text="Sign In" />
+        app:layout_constraintTop_toTopOf="@+id/AlrHvaAcctText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
