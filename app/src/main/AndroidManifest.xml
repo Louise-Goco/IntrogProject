@@ -39,6 +39,33 @@
         <activity android:name=".DashboardActivity"
             android:exported="false" />
 
+        <!-- Admin Features -->
+        <activity android:name=".admin.AdminLoginActivity"
+            android:exported="true"
+            android:label="Admin Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminCustomerManagementActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminSellerManagementActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminRiderManagementActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminOrderMonitoringActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminCategoryManagementActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminPayoutManagementActivity"
+            android:exported="false" />
+        <activity android:name=".admin.AdminSystemConfigurationActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

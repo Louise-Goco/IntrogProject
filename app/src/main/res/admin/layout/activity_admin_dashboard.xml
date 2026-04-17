@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Dashboard"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_gravity="center">
+
+            <!-- Buttons for each module -->
+            <Button
+                android:id="@+id/btnCustomerMgmt"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Customer Mgmt"
+                android:backgroundTint="#3F51B5"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnSellerMgmt"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Seller Mgmt"
+                android:backgroundTint="#4CAF50"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnRiderMgmt"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Rider Mgmt"
+                android:backgroundTint="#FF9800"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnOrderMonitoring"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Order Monitoring"
+                android:backgroundTint="#9C27B0"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnCategoryMgmt"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Category Mgmt"
+                android:backgroundTint="#00BCD4"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnPayoutMgmt"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="Payout Mgmt"
+                android:backgroundTint="#E91E63"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnSystemConfig"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:text="System Config"
+                android:backgroundTint="#607D8B"
+                android:layout_margin="8dp"
+                android:padding="16dp"/>
+
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>
